@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual Environment (IMPORTANT!)
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Data files
+data/raw/
+data/processed/
+data/chunked/
+data/embeddings/
+*.pdf
+*.csv
+
+# Vector DB storage
+qdrant_storage/
+
+# Models
+models/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
