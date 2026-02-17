@@ -2,14 +2,14 @@
 langchain==0.1.20
 langchain-community==0.0.38
 
-# Vector Database
-qdrant-client==1.8.0
+# Vector Database (local, embedded)
+chromadb
 
 # Embeddings (local)
 sentence-transformers==2.5.1
 torch==2.2.0
 
-# LLM Integration (LM Studio uses OpenAI-compatible API)
+# LLM Integration (Groq uses OpenAI-compatible API)
 openai==1.12.0
 
 # Document Processing

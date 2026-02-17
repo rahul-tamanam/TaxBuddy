@@ -5,7 +5,7 @@ An AI-powered chatbot to help international students navigate U.S. tax filing.
 ## Tech Stack
 
 - **Vector Database:** Qdrant (local)
-- **LLM:** Llama 3.1 via LM Studio (local)
+- **LLM:** Groq (Llama 3.1 8B Instant via API)
 - **Embeddings:** sentence-transformers (all-MiniLM-L6-v2)
 - **Framework:** LangChain
 - **Interface:** Streamlit
@@ -34,8 +34,8 @@ RAG/
 
 ### Prerequisites
 - Python 3.11+
-- LM Studio installed and running
-- 8GB+ RAM recommended
+- A [Groq](https://console.groq.com) API key (free tier available)
+- 8GB+ RAM recommended for embeddings and Qdrant
 
 ### Installation
 
@@ -56,10 +56,13 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Set up LM Studio
-- Download and install LM Studio
-- Download Llama 3.1 model (8B recommended for consumer hardware)
-- Start local server on port 1234
+4. Set up Groq API key  
+   Copy `.env.example` to `.env` and add your key:
+```bash
+cp .env.example .env
+# Edit .env and set GROQ_API_KEY=your_key
+```
+   Get a key at [console.groq.com](https://console.groq.com). Optionally set `GROQ_MODEL` in `.env` (default: `llama-3.1-8b-instant`).
 
 5. Run the application
 ```bash
